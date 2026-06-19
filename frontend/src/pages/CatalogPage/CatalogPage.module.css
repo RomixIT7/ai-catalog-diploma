@@ -1,0 +1,107 @@
+.catalogPage {
+  padding-top: 48px;
+  padding-bottom: 52px;
+}
+
+.catalogPageWrapper {
+  display: flex;
+  gap: 64px;
+}
+
+.aside {
+  width: fit-content;
+}
+
+.mobileFilterBtn {
+  display: none;
+}
+
+.mobileHeader {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .catalogPageWrapper {
+    gap: 24px;
+  }
+}
+
+/* ================= АДАПТИВ ДЛЯ МОБІЛКИ ТА ПЛАНШЕТА ================= */
+
+@media screen and (max-width: 1024px) {
+  .catalogPageWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobileFilterBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 450px;
+    height: 48px;
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    background-color: var(--inputs);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--main);
+    cursor: pointer;
+    margin-bottom: 8px;
+  }
+
+  /* Перетворюємо aside на висувну шторку */
+  .aside {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Спочатку захована за межами екрана справа */
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--white);
+    z-index: 999;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Клас, який додається при кліку на кнопку */
+  .aside.isOpen {
+    right: 0; /* Виїжджає на екран */
+  }
+
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--gray-light);
+    font-family: var(--font-family);
+    color: var(--main);
+  }
+
+  .mobileHeader h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .closeBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--main);
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .filtersContent {
+    padding: 20px;
+    overflow-y: auto; /* Якщо фільтрів багато, їх можна буде скролити всередині меню */
+    flex-grow: 1;
+  }
+}

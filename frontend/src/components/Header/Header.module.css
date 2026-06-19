@@ -1,0 +1,71 @@
+.header {
+  position: relative;
+  border-bottom: 1px solid var(--badges);
+  padding: 24px 0;
+  height: 72px;
+  background-color: var(--inputs);
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  margin-left: -120px;
+}
+
+.logo img {
+  display: block;
+  height: 80px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: var(--main);
+}
+
+.active {
+  color: var(--button-hover);
+}
+
+/* ================= АДАПТИВ СТИЛІ ================= */
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-bottom: 12px;
+    margin-left: 0;
+  }
+
+  .logo img {
+    max-height: none;
+    height: 80px;
+    width: auto;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,20 @@
+.errorMessage {
+  font-family: var(--font-family);
+  font-size: 24px;
+  color: var(--button);
+  min-height: 200px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .errorMessage {
+    font-size: 18px;
+  }
+}

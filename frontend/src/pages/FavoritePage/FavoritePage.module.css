@@ -1,0 +1,16 @@
+.favoritePage {
+  padding-top: 48px;
+  padding-bottom: 52px;
+}
+
+.favoritePageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .favoritePage {
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+}

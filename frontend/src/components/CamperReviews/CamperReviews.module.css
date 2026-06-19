@@ -1,0 +1,70 @@
+.camperReviewsList {
+  width: 631px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  box-sizing: border-box;
+}
+
+.camperReviewsListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.camperReviewerInfoWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.camperReviewerAvatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--badges);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.camperReviewerName {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  margin-bottom: 4px;
+}
+
+.starList {
+  display: flex;
+  gap: 4px;
+}
+
+.camperReviewComment {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  word-break: break-word;
+}
+
+@media screen and (max-width: 1024px) {
+  .camperReviewsList {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .camperReviewsList {
+    gap: 32px;
+  }
+}

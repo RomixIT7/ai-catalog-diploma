@@ -1,0 +1,195 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 360px;
+  height: auto;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  border-radius: 12px;
+  padding: 18px 18px 18px 46px;
+  width: 360px;
+  height: 56px;
+  background-color: var(--inputs);
+  outline: none;
+  border: none;
+  color: var(--main);
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.errorMessage {
+  color: var(--button);
+  font-size: 14px;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  text-align: center;
+}
+
+.iconMap {
+  fill: var(--main);
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input:placeholder-shown + .iconMap {
+  fill: var(--gray);
+}
+
+.filters {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-top: 40px;
+}
+
+.vehicleCharacteristics {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  padding-bottom: 48px;
+  position: relative;
+  margin-top: 32px;
+}
+
+.vehicleCharacteristics::after {
+  width: 360px;
+  height: 1px;
+  content: "";
+  background-color: var(--gray-light);
+  position: absolute;
+  left: 0;
+  top: 48px;
+}
+
+.vehicleCharacteristicsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  width: 360px;
+}
+
+.btn {
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  width: 112px;
+  height: 96px;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--main);
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox:checked + .btn {
+  border: 1px solid var(--button);
+}
+
+.radioBtn:checked + .btn {
+  border: 1px solid var(--button);
+}
+
+.icon {
+  fill: none;
+  stroke: var(--main);
+}
+
+.checkbox:checked + .btn .icon,
+.radioBtn:checked + .btn .icon {
+  stroke: var(--button);
+}
+
+.searchBtn {
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: fit-content;
+  height: 56px;
+  background: var(--button);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  border: none;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background: var(--button-hover);
+}
+
+@media screen and (max-width: 480px) {
+  .label,
+  .input,
+  .vehicleCharacteristicsList {
+    width: 100%;
+  }
+
+  .vehicleCharacteristics::after {
+    width: 100%;
+  }
+
+  .vehicleCharacteristicsList li {
+    flex-grow: 1;
+    flex-basis: calc(33.333% - 12px);
+    min-width: 95px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .searchBtn {
+    width: 100%;
+  }
+}

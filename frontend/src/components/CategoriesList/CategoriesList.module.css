@@ -1,0 +1,35 @@
+.categoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.categoriesItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--badges);
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+}
+
+.icon {
+  fill: none;
+  stroke: currentColor;
+}
+
+@media screen and (max-width: 480px) {
+  .categoriesItem {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+}

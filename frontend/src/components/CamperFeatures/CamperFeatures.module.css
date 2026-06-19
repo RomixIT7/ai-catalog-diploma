@@ -1,0 +1,68 @@
+.featuresWrapper {
+  border-radius: 10px;
+  padding: 44px 52px;
+  width: 100%; /* Тепер блок розтягується на всю ширину батьківського контейнера */
+  max-width: 631px; /* На великому десктопі він триматиме свій оригінальний розмір */
+  height: auto;
+  background-color: var(--inputs);
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  box-sizing: border-box;
+}
+
+.vehicleDetailsTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.vehicleDetailsTitle:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--gray-light);
+}
+
+.vehicleDetailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vehicleDetailsListItem {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vehicleDetailsListItem span {
+  text-align: right;
+  max-width: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+  .featuresWrapper {
+    max-width: 641px; /* На ноутбуках розширюємо його рівно під ширину форми замовлення, яку ми центрували раніше */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .featuresWrapper {
+    padding: 24px 16px;
+    gap: 32px;
+  }
+}

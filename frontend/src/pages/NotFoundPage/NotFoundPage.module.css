@@ -1,0 +1,63 @@
+.notFoundPageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  height: auto;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.notFoundText {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.redirectText {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--main);
+  line-height: 1.4;
+}
+
+.linkToHome {
+  display: block;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: fit-content;
+  height: auto;
+  background-color: var(--button);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.linkToHome:hover {
+  background-color: var(--button-hover);
+}
+
+@media screen and (max-width: 480px) {
+  .notFoundText {
+    font-size: 26px;
+  }
+
+  .redirectText {
+    font-size: 16px;
+  }
+
+  .linkToHome {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}

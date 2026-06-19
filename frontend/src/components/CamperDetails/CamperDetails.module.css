@@ -1,0 +1,129 @@
+.camperNameAndPrice {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--main);
+}
+
+.camperRatingAndLocationWrapper {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.camperRatingWrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.camperRating {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.icon {
+  fill: var(--main);
+}
+
+.camperGallery {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.camperImg {
+  border-radius: 10px;
+  width: 292px;
+  height: 312px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.camperDescription {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.camperDetailsList {
+  display: flex;
+  gap: 40px;
+  margin-top: 44px;
+  margin-bottom: 44px;
+  position: relative;
+}
+
+.camperDetailsList:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 36px;
+  background-color: var(--gray-light);
+}
+
+.camperDetailsListLink {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.active:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--button);
+  z-index: 1;
+}
+
+.camperAdditionalDetailsWrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 1140px) {
+  .camperAdditionalDetailsWrapper {
+    flex-direction: column;
+    gap: 44px;
+    align-items: stretch; /* Розтягуємо внутрішні блоки на всю ширину контейнера */
+  }
+
+  /* Скасовуємо жорсткі обмеження ширини для вкладок і форми, щоб вони заповнили 100% простору ноутбука */
+  .camperAdditionalDetailsWrapper > :global(.formWrapper),
+  .camperAdditionalDetailsWrapper > div {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .camperNameAndPrice {
+    font-size: 20px;
+  }
+
+  .camperImg {
+    width: 240px;
+    height: 260px;
+  }
+}
