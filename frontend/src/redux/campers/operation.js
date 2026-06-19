@@ -2,7 +2,7 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const instance = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://ai-catalog-diploma.onrender.com/api",
 });
 
 export const fetchCampers = createAsyncThunk(
